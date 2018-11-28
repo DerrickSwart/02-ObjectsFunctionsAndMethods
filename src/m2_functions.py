@@ -3,11 +3,11 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and .
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
-# TODO: 2.
+# done: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -18,9 +18,12 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 ###############################################################################
 
 import rosegraphics as rg
-
+import math
 
 def main():
+    print(triangle(3, 4))
+    Turtle_1('red', 1)
+    Turtle_1('blue', 10)
     """
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
@@ -28,7 +31,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 3a.  Define a function immediately below this _TODO_.
+# DONE: 3a.  Define a function immediately below this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
@@ -36,14 +39,16 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# DONE: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
+def triangle (side_1, side_2):
+   return math.sqrt((side_1 ** 2) + (side_2 ** 2))
 
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# DONE: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -65,14 +70,21 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
-
-
+def Turtle_1 (color , thick):
+   window =  rg.TurtleWindow ()
+   t_one = rg.SimpleTurtle ('turtle')
+   t_two = rg.SimpleTurtle ('arrow')
+   t_one.pen = rg.Pen('green', thick)
+   t_two.pen = rg.Pen(color, 5)
+   t_one.forward(100)
+   t_two.backward(100)
+   window.close_on_mouse_click()
 ###############################################################################
-# TODO: 5.
+# DONE: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
@@ -82,14 +94,14 @@ def main():
 #        press the   Commit and Push   button.
 #           Note: If you see only a Commit button:
 #              - HOVER over the  Commit  button
-#                  (in the lower-right corner of the window)
-#              - CLICK on  Commit and Push.
-#
-#   COMMIT adds the changed work to the version control on your computer.
-#   PUSH adds the changed work into your Github repository in the "cloud".
-#
-#   COMMIT-and-PUSH your work as often as you want, but at the least, commit
-#   and push after you have tested a module and believe that it is correct.
+#          modul        (in the lower-right corner of the window)
+# #              - CLICK on  Commit and Push.
+# #
+# #   COMMIT adds the changed work to the version control on your computer.
+# #   PUSH adds the changed work into your Github repository in the "cloud".
+# #
+# #   COMMIT-and-PUSH your work as often as you want, but at the least, commit
+# #   and push after you have tested a e and believe that it is correct.
 #
 ###############################################################################
 
