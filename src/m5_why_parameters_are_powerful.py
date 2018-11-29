@@ -211,7 +211,7 @@ def my_circles(point, radius, turn, thickness, circles ):
 
     turtle.pen_up()
     turtle.go_to(point)
-    turtle.set_heading(0)  # Point "east" (towards the right)
+    turtle.set_heading(0)  # Point "east"  (towards the right)
     seq = ['red', 'blue', 'purple', 'midnight blue', 'green', 'black']
 
     for k in range(1, circles):  # k becomes 1, 2, 3, ... 10
